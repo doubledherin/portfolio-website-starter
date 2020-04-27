@@ -1,11 +1,10 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby Gallery Starter
+  Gatsby Portfolio Starter
 </h1>
 
 This is a Gatsby implementation of [Start Bootstrap's Creative] (https://startbootstrap.com/previews/creative/) template based on [**John J Kerry's Gatsby starter**](https://johnjkerr.github.io/gatsby-creative).
@@ -14,7 +13,6 @@ This is a Gatsby implementation of [Start Bootstrap's Creative] (https://startbo
 
 - [React Bootstrap](https://react-bootstrap.github.io)
 - [Start Bootstrap Creative](https://startbootstrap.com/previews/creative)
-- [GitHub Actions](https://github.com/features/actions)
 - [React Scrollspy](https://github.com/makotot/react-scrollspy)
 
 ## 🚀 Getting Started
@@ -77,34 +75,26 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
-## 💫 Deployment
+## 💫 Deployment to Github Pages
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/JohnJKerr/gatsby-creative)
+You have 2 choices for Github deployment: 
+- your github.io subdomain (e.g. `<username>.github.io`) or 
+- a github.io path of your subdomain (e.g. `<username>.github.io/<pathPrefix>`)
 
-### GitHub Actions x GitHub Pages
+### Deployment to your github.io subdomain
+1. In your Github repo, click Settings, scroll down to Github Pages, and select `master` for your source page.
+2. In your `package.json`, under `scripts`, add a new entry: `"deploy": "gatsby build && gh-pages -d public -b master"`
+3. Run `npm run deploy` and you should see the site at `username.github.io`.
+4. If you'd like, remove the `pathPrefix` entry in the `gatsby-config.js` file, as it's only needed for deployment to a specific path.
 
-This project also contains an example of [GitHub Actions](https://github.com/features/actions) deployment to [GitHub Pages](https://pages.github.com). View the [`deploy.yml`](https://github.com/JohnJKerr/gatsby-creative/blob/master/.github/workflows/deploy.yml) for the build definition.
+### Deployment to a github.io path
+1. Create a local `gh-pages` branch and push it to Github.
+2. In your Github repo, click Settings, scroll down to Github Pages, and select `gh-pages` for your source page.
+3. In the `gatsby-config.js` file, change the `pathPrefix` entry to be what you want your username.github.io path to be. (By default, it's set to `/my-portfolio`)
+4. In your `package.json`, under `scripts`, add a new entry: `"deploy": "gatsby build --prefix-paths && gh-pages -d public"`
+5. Run `npm run deploy` and you should see the site at `<username>.github.io/<pathPrefix>`.
 
-The build process deploys to a folder rather than the root, and therefore uses the `--pages-prefix` flag in the build step and `pathPrefix: '/gatsby-creative'` in [`gatsby-config.js`](https://github.com/JohnJKerr/gatsby-creative/blob/master/gatsby-config.js).
+## 💫 Deployment to Other Nice Places
+If you're interested in hosting your  site somewhere other than Github Pages, check out the [**Gatsby docs**](https://www.gatsbyjs.org/docs/deploying-and-hosting/). There are tons of options.
 
-#### Access Token
 
-If you wish to use the GitHub Actions workflow to deploy to GitHub Pages you will need to add an `ACCESS_TOKEN` secret to your repository
-
-Go to https://github.com/settings/tokens to generate a Personal Access Token and add it to your account. The token will need the following permissions:
-
-- repo
-- read:packages
-- write:packages
-
-Make a copy of your token as you will not be able to access it again.
-
-Return to your repository, go to settings and add a secret with the name `ACCESS_TOKEN`.
-
-The Action will then deploy your site to `{your-github-pages-url}/{your-repository}`.
- 
-#### Not Using GitHub Pages?
-
-If you do not wish to use GitHub Pages, simply remove the `/.github/workflows/deploy.yml` file.
-
-<!-- AUTO-GENERATED-CONTENT:END -->
