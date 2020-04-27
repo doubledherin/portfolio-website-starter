@@ -5,12 +5,10 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby x Start Bootstrap Creative
+  Gatsby Gallery Starter
 </h1>
 
-Gatsby implementation of [Start Bootstrap's Creative](https://startbootstrap.com/previews/creative/) template.
-
-[**Demo Website**](https://johnjkerr.github.io/gatsby-creative)
+This is a Gatsby implementation of [Start Bootstrap's Creative] (https://startbootstrap.com/previews/creative/) template based on [**John J Kerry's Gatsby starter**](https://johnjkerr.github.io/gatsby-creative).
 
 ## ✨ Features
 
@@ -19,39 +17,57 @@ Gatsby implementation of [Start Bootstrap's Creative](https://startbootstrap.com
 - [GitHub Actions](https://github.com/features/actions)
 - [React Scrollspy](https://github.com/makotot/react-scrollspy)
 
-## 👀 Template Differences
-
-Efforts have been made to keep the implementation as close to the source template as possible, however in adapting from jQuery to React there have been some changes.
-
-- Scrolling to page sections uses the browser [`scrollTo`](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTo) function rather than a jQuery animation. This means that [browsers which do not support `scrollTo`](https://caniuse.com/#search=scrollTo) are not animated.
-- The portfolio carousel uses React Bootstrap functionality for modal and carousel rather than Magnific Popup.
-
 ## 🚀 Getting Started
 
-1.  **Create a Gatsby site.**
+0. **Make sure you have the basics.**
 
+    ***Node.js***
+    In order to use this template, you need to have node.js installed. Run `node -v` on the command line, and if a version is displayed, you're good to go. If not, check out Gatsby's instructions on the [**appropriate installation**](https://www.gatsbyjs.org/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system) for your machine.
+
+    ***Git***
+    If you don't have Git, get it using [**these instructions**](https://www.gatsbyjs.org/tutorial/part-zero/#install-git).
+
+    ***Gatsby CLI***
+    You'll need to install this node.js package globally, with `npm install -g gatsby-cli`. Once it's installed, view the available commands by running `gatsby --help`.
+
+1.  **Create a Gatsby site.**
     Use the Gatsby CLI to create a new site, specifying the starter project.
     
     ```sh
-    gatsby new project-name https://github.com/JohnJKerr/gatsby-creative
+    gatsby new <your-project-name> https://github.com/doubledherin/portfolio-website-starter.git
     ```
+
+    This will create a new Gatsby project based on a clone of this repo.
 
 2.  **Start developing.**
 
     Navigate into your new site’s directory and start it up.
 
     ```sh
-    cd project-name
+    cd <your-project-name>
     gatsby develop
     ```
+
+    You'll see that Git is already initialized in your repo. To push to Github, create a new repository on Github and then add it as the origin remote locally with `git remote add origin <url-of-your-github-repo>`. 
+
+    Make your first commit and push with 
+    ```sh
+    git add .
+    git commit -m "Initial commit"
+    git push -f origin master
+    ```
+
+    You should only need the `-f` (force push) tag the first push.
 
 3.  **Open the source code and start editing!**
 
     Your site is now running at `http://localhost:8000`!
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is GraphiQL, a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `project-name` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    Open the `<your-project-name>` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+
+    Hot reloading is hot hot hot.
 
 ## 🎓 Learning Gatsby
 
@@ -61,7 +77,7 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
-## 💫 Deploy
+## 💫 Deployment
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/JohnJKerr/gatsby-creative)
 
