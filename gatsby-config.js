@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `/my-portfolio`,
+  pathPrefix: `/portfolio-website-starter`,
   siteMetadata: {
     title: `Gatsby Portfolio Starter`,
     description: `Show off your stuff with this cool starter.`,
